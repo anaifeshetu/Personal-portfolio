@@ -17,68 +17,291 @@
 
   --color-border: #242b32;
 
+  --color-highlight: #f5a623;
+
+  --color-surface: #1a2329;
+
   --radius: 0.75rem;
+}
+
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+
+.dark {
+  --color-background: #0f1418;
+  --color-foreground: #f0f2f5;
+
+  --color-card: #141a1f;
+
+  --color-primary: #20b2a6;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #1f2830;
+  --color-secondary-foreground: #20b2a6;
+
+  --color-muted: #252e37;
+  --color-muted-foreground: #7e8491;
+
+  --color-border: #242b32;
 
   --color-highlight: #f5a623;
+
   --color-surface: #1a2329;
 }
+
+/* ============================= */
+/* LIGHT MODE */
+/* ============================= */
+
+.light {
+  --color-background: #f7f9fb;
+  --color-foreground: #182126;
+
+  --color-card: #ffffff;
+
+  --color-primary: #1fa89d;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #eaf5f3;
+  --color-secondary-foreground: #167d75;
+
+  --color-muted: #eef2f4;
+  --color-muted-foreground: #66727a;
+
+  --color-border: #dce4e8;
+
+  --color-highlight: #e49a1d;
+
+  --color-surface: #ffffff;
+}
+
+/* ============================= */
+/* BASE */
+/* ============================= */
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
+
   body {
+    margin: 0;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Inter", sans-serif;
+
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   .font-serif {
     font-family: "Playfair Display", serif;
   }
+
+  * {
+    border-color: var(--color-border);
+  }
 }
 
+/* ============================= */
+/* HERO - DARK MODE */
+/* ============================= */
+
+/*
+   DARK MODE IS EXACTLY AS BEFORE.
+*/
+
+html.dark .hero-section {
+  background-color: #0f1418;
+}
+
+html.dark .hero-background {
+  display: block;
+}
+
+html.dark .hero-overlay {
+  display: block;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(15, 20, 24, 0.10),
+      rgba(15, 20, 24, 0.68),
+      #0f1418
+    );
+}
+
+/* ============================= */
+/* HERO - LIGHT MODE */
+/* ============================= */
+
+/*
+   LIGHT MODE:
+   1. Solid background
+   2. Background image completely hidden
+   3. Overlay completely removed
+*/
+
+html.light .hero-section {
+  background-color: #f7f9fb !important;
+}
+
+html.light .hero-background {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+html.light .hero-overlay {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: none !important;
+}
+
+/* ============================= */
+/* GLASS */
+/* ============================= */
+
 @layer components {
-  .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+
+  .dark .glass {
+    background-color: color-mix(
+      in srgb,
+      var(--color-surface) 50%,
+      transparent
+    );
+
     backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid color-mix(
+      in srgb,
+      var(--color-border) 50%,
+      transparent
+    );
   }
 
-  .glass-strong {
-    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  .dark .glass-strong {
+    background-color: color-mix(
+      in srgb,
+      var(--color-surface) 80%,
+      transparent
+    );
+
     backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid color-mix(
+      in srgb,
+      var(--color-border) 60%,
+      transparent
+    );
+  }
+
+  .light .glass {
+    background-color: rgba(255, 255, 255, 0.68);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(24, 33, 38, 0.08);
+
+    box-shadow:
+      0 8px 25px rgba(24, 33, 38, 0.05);
+  }
+
+  .light .glass-strong {
+    background-color: rgba(255, 255, 255, 0.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(24, 33, 38, 0.09);
+
+    box-shadow:
+      0 12px 35px rgba(24, 33, 38, 0.07);
   }
 
   .glass-text {
-    text-shadow: 0 0 30px color-mix(in srgb, var(--color-primary) 50%, transparent);
+    text-shadow:
+      0 0 30px color-mix(
+        in srgb,
+        var(--color-primary) 45%,
+        transparent
+      );
   }
 
   .glow-border {
     box-shadow:
-      0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent),
-      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+      0 0 20px color-mix(
+        in srgb,
+        var(--color-primary) 18%,
+        transparent
+      ),
+      inset 0 0 20px color-mix(
+        in srgb,
+        var(--color-primary) 5%,
+        transparent
+      );
   }
 
   .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 20%, transparent);
+    background-color: color-mix(
+      in srgb,
+      var(--color-primary) 15%,
+      transparent
+    );
+
     backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 15%, transparent);
+
+    box-shadow:
+      0 0 20px color-mix(
+        in srgb,
+        var(--color-primary) 14%,
+        transparent
+      );
   }
 }
 
+/* ============================= */
+/* LIGHT MODE TEXT FIX */
+/* ============================= */
+
+.light .hero-title {
+  color: #182126;
+}
+
+.light .text-white {
+  color: #182126;
+}
+
+/* Keep text white inside primary buttons */
+.light .bg-primary .text-white,
+.light a.bg-primary,
+.light button.bg-primary {
+  color: #ffffff;
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
 @layer utilities {
+
   @keyframes fade-in {
     from {
       opacity: 0;
       transform: translateY(20px);
       filter: blur(10px);
     }
+
     to {
       opacity: 1;
-      transform: translateY(0px);
-      filter: blur(0px);
+      transform: translateY(0);
+      filter: blur(0);
     }
   }
 
@@ -87,12 +310,15 @@
     100% {
       transform: translate(0, 0);
     }
+
     25% {
       transform: translate(20px, -30px);
     }
+
     50% {
       transform: translate(-15px, -20px);
     }
+
     75% {
       transform: translate(30px, 10px);
     }
@@ -102,6 +328,7 @@
     0% {
       stroke-dashoffset: 400;
     }
+
     100% {
       stroke-dashoffset: -550;
     }
@@ -110,8 +337,9 @@
   @keyframes float {
     0%,
     100% {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
@@ -121,6 +349,7 @@
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-50%);
     }
@@ -171,6 +400,7 @@
   }
 }
 
+/* Animated Border */
 .group:hover .animated-border-path {
   animation: animated-border 1.5s linear infinite;
 }

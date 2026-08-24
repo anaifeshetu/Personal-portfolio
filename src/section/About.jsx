@@ -5,24 +5,25 @@ const highlights = [
     icon: Code2,
     title: "Clean Code",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Writing clean, maintainable, and scalable code that is easy to understand and built to last.",
   },
   {
     icon: Rocket,
     title: "Performance",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Building fast, responsive, and reliable applications that provide a smooth user experience.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    description:
+      "Working effectively with others, sharing ideas, and contributing to meaningful software projects.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Continuous Learning",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Continuously learning new technologies and improving my skills to become a better software engineer.",
   },
 ];
 
@@ -31,8 +32,10 @@ export default function About() {
     <section id="about" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+
           {/* Left Column */}
           <div className="space-y-8">
+
             <div className="animate-fade-in">
               <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
                 About Me
@@ -48,32 +51,35 @@ export default function About() {
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
+
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate software engineer with over 1 years of
-                experience crafting digital products that make a difference.
-                My journey started with a curiosity for how things work on
-                the web, and it has evolved into a deep expertise in modern
-                frontend technologies.
+                I'm a passionate Software Engineer with a strong interest in
+                creating modern and meaningful digital experiences. My journey
+                in software development began when I joined the Software
+                Engineering department, where I discovered my passion for
+                coding, problem-solving, and building technology.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with
-                a keen eye for design and user experience.
+                Since then, I have been continuously developing my skills and
+                working with modern technologies such as React, Next.js,
+                TypeScript, Node.js, and databases. I enjoy turning ideas into
+                clean, responsive, and user-friendly applications.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new
-                technologies, contributing to open-source projects, or
-                sharing knowledge with the developer community.
+                I also gained practical experience through a 2-month Software
+                Engineering internship at Hahu Cloud Technology. This
+                experience allowed me to work in a professional environment,
+                collaborate with a team, improve my development skills, and
+                gain a better understanding of real-world software development.
               </p>
 
               <div className="glass rounded-2xl p-6 mt-8 glow-border animate-fade-in animation-delay-300">
                 <p className="text-lg text-muted-foreground leading-relaxed italic">
-                  "My mission is to create digital experiences that are not
-                  just functional, but truly delightful - products that
-                  users love to use and developers love to maintain."
+                  "My goal is to continuously grow as a Software Engineer and
+                  build digital products that are useful, reliable, and
+                  enjoyable for people to use."
                 </p>
               </div>
             </div>
@@ -81,6 +87,7 @@ export default function About() {
 
           {/* Right Column */}
           <div className="grid sm:grid-cols-2 gap-6">
+
             {highlights.map((item, idx) => (
               <div
                 key={idx}
@@ -90,12 +97,17 @@ export default function About() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+
+                <h3 className="text-lg font-semibold mb-2">
+                  {item.title}
+                </h3>
+
                 <p className="text-sm text-muted-foreground">
                   {item.description}
                 </p>
               </div>
             ))}
+
           </div>
         </div>
       </div>
