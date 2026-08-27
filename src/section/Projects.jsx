@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Ethio Massage",
     description:
-      "A modern massage and wellness booking platform where users can explore services, view available options, and easily schedule appointments through a simple and responsive interface.",
+      "A modern massage and wellness booking platform where users can explore services, discover available treatments, and easily schedule appointments through a clean and responsive interface.",
     image: proj1,
     tags: ["React", "JavaScript", "Tailwind CSS"],
     liveDemo: "https://ethiomassage.egmhoney.workers.dev/",
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Live Football Score",
     description:
-      "A real-time football score application that uses an external football API to fetch and display live match scores, fixtures, team information, and football updates in a clean interface.",
+      "A real-time football application that connects to a football API to display live match scores, fixtures, team information, and football updates in a clean and responsive interface.",
     image: proj2,
     tags: ["React", "JavaScript", "API"],
     liveDemo: "https://live-football-score.egmhoney.workers.dev/",
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "World News",
     description:
-      "A modern world news application that uses a news API to fetch the latest articles and present breaking stories, categories, and global news in a clean and responsive interface.",
+      "A modern news platform that uses a news API to fetch and display the latest international stories, breaking news, and different news categories in an easy-to-use responsive interface.",
     image: proj3,
     tags: ["React", "JavaScript", "API"],
     liveDemo: "https://world-news.egmhoney.workers.dev/",
@@ -37,13 +37,13 @@ const projects = [
   },
 
   {
-    title: "Kids Learning Website",
+    title: "Ecommerce Fashion Store",
     description:
-      "An interactive educational website designed for children with engaging learning experiences, colorful interfaces, and age-friendly activities that make learning more enjoyable.",
+      "A modern fashion ecommerce website where customers can explore men's, women's, and kids' collections, view detailed products, select sizes, add items to their cart, and complete the shopping experience through a clean and responsive interface.",
     image: proj4,
-    tags: ["React", "JavaScript", "Tailwind CSS"],
-    liveDemo: null,
-    github: null,
+    tags: ["React", "JavaScript", "Bootstrap"],
+    liveDemo: "https://ecommerce.egmhoney.workers.dev/",
+    github: "https://github.com/anaifeshetu/Ecommerce",
   },
 ];
 
@@ -57,59 +57,57 @@ export default function Projects() {
 
       <div
         className="
-        absolute
-        top-20
-        right-0
-        w-96
-        h-96
-        bg-primary/10
-        rounded-full
-        blur-[120px]
+          absolute
+          top-20
+          right-0
+          w-96
+          h-96
+          bg-primary/10
+          rounded-full
+          blur-[120px]
         "
-      >
-      </div>
+      />
 
       <div
         className="
-        absolute
-        bottom-20
-        left-0
-        w-72
-        h-72
-        bg-primary/5
-        rounded-full
-        blur-[120px]
+          absolute
+          bottom-20
+          left-0
+          w-72
+          h-72
+          bg-primary/5
+          rounded-full
+          blur-[120px]
         "
-      >
-      </div>
+      />
 
       <div
         className="
-        container
-        mx-auto
-        px-6
-        relative
-        z-10
+          container
+          mx-auto
+          px-6
+          relative
+          z-10
         "
       >
         {/* Heading */}
 
         <div
           className="
-          text-center
-          max-w-3xl
-          mx-auto
-          mb-20
-          animate-fade-in
+            text-center
+            max-w-3xl
+            mx-auto
+            mb-20
+            animate-fade-in
           "
         >
           <span
             className="
-            text-primary
-            uppercase
-            tracking-[0.3em]
-            text-sm
-            font-medium
+              text-primary
+              uppercase
+              tracking-[0.3em]
+              text-sm
+              font-medium
             "
           >
             My Portfolio
@@ -117,32 +115,31 @@ export default function Projects() {
 
           <h2
             className="
-            mt-5
-            text-4xl
-            md:text-5xl
-            lg:text-6xl
-            font-bold
-            text-white
+              mt-5
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              font-bold
+              text-white
             "
           >
             Projects that
             <span className="text-primary">
-              {" "}
-              create impact
+              {" "}create impact
             </span>
           </h2>
 
           <p
             className="
-            mt-6
-            text-lg
-            text-muted-foreground
-            leading-8
+              mt-6
+              text-lg
+              text-muted-foreground
+              leading-8
             "
           >
-            A collection of my frontend projects where I combine
-            modern technologies, clean design, APIs, and real-world
-            solutions.
+            A collection of my projects where I combine modern
+            technologies, responsive design, APIs, and real-world
+            solutions to create useful digital experiences.
           </p>
         </div>
 
@@ -150,27 +147,27 @@ export default function Projects() {
 
         <div
           className="
-          grid
-          lg:grid-cols-2
-          gap-8
+            grid
+            lg:grid-cols-2
+            gap-8
           "
         >
           {projects.map((project, index) => (
             <div
               key={index}
               className="
-              group
-              relative
-              glass
-              rounded-3xl
-              overflow-hidden
-              border
-              border-white/10
-              hover:border-primary/30
-              hover:-translate-y-3
-              transition-all
-              duration-500
-              animate-fade-in
+                group
+                relative
+                glass
+                rounded-3xl
+                overflow-hidden
+                border
+                border-white/10
+                hover:border-primary/30
+                hover:-translate-y-3
+                transition-all
+                duration-500
+                animate-fade-in
               "
               style={{
                 animationDelay: `${index * 150}ms`,
@@ -183,12 +180,12 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   className="
-                  w-full
-                  h-64
-                  object-cover
-                  group-hover:scale-105
-                  transition-transform
-                  duration-700
+                    w-full
+                    h-64
+                    object-cover
+                    group-hover:scale-105
+                    transition-transform
+                    duration-700
                   "
                 />
               </div>
@@ -198,18 +195,18 @@ export default function Projects() {
               <div className="p-7">
                 <div
                   className="
-                  flex
-                  justify-between
-                  items-center
+                    flex
+                    justify-between
+                    items-center
                   "
                 >
                   <h3
                     className="
-                    text-2xl
-                    font-semibold
-                    text-white
-                    group-hover:text-primary
-                    transition
+                      text-2xl
+                      font-semibold
+                      text-white
+                      group-hover:text-primary
+                      transition
                     "
                   >
                     {project.title}
@@ -217,21 +214,23 @@ export default function Projects() {
 
                   <ArrowUpRight
                     className="
-                    w-5
-                    h-5
-                    text-muted-foreground
-                    group-hover:text-primary
-                    transition
+                      w-5
+                      h-5
+                      text-muted-foreground
+                      group-hover:text-primary
+                      transition
                     "
                   />
                 </div>
 
+                {/* Description */}
+
                 <p
                   className="
-                  mt-4
-                  text-sm
-                  text-muted-foreground
-                  leading-7
+                    mt-4
+                    text-sm
+                    text-muted-foreground
+                    leading-7
                   "
                 >
                   {project.description}
@@ -241,27 +240,27 @@ export default function Projects() {
 
                 <div
                   className="
-                  flex
-                  flex-wrap
-                  gap-2
-                  mt-6
+                    flex
+                    flex-wrap
+                    gap-2
+                    mt-6
                   "
                 >
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
                       className="
-                      px-4
-                      py-2
-                      rounded-full
-                      bg-white/5
-                      border
-                      border-white/10
-                      text-xs
-                      text-muted-foreground
-                      hover:text-white
-                      hover:border-primary/40
-                      transition
+                        px-4
+                        py-2
+                        rounded-full
+                        bg-white/5
+                        border
+                        border-white/10
+                        text-xs
+                        text-muted-foreground
+                        hover:text-white
+                        hover:border-primary/40
+                        transition
                       "
                     >
                       {tag}
@@ -273,9 +272,10 @@ export default function Projects() {
 
                 <div
                   className="
-                  flex
-                  gap-4
-                  mt-7
+                    flex
+                    flex-wrap
+                    gap-4
+                    mt-7
                   "
                 >
                   {/* Live Demo */}
@@ -286,18 +286,18 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
-                      flex
-                      items-center
-                      gap-2
-                      px-5
-                      py-3
-                      rounded-xl
-                      bg-primary
-                      text-white
-                      text-sm
-                      font-medium
-                      hover:scale-105
-                      transition
+                        flex
+                        items-center
+                        gap-2
+                        px-5
+                        py-3
+                        rounded-xl
+                        bg-primary
+                        text-white
+                        text-sm
+                        font-medium
+                        hover:scale-105
+                        transition
                       "
                     >
                       Live Demo
@@ -306,19 +306,20 @@ export default function Projects() {
                     </a>
                   ) : (
                     <button
+                      type="button"
+                      disabled
                       className="
-                      flex
-                      items-center
-                      gap-2
-                      px-5
-                      py-3
-                      rounded-xl
-                      bg-primary
-                      text-white
-                      text-sm
-                      font-medium
-                      hover:scale-105
-                      transition
+                        flex
+                        items-center
+                        gap-2
+                        px-5
+                        py-3
+                        rounded-xl
+                        bg-white/10
+                        text-muted-foreground
+                        text-sm
+                        font-medium
+                        cursor-not-allowed
                       "
                     >
                       Live Demo
@@ -335,48 +336,48 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
-                      flex
-                      items-center
-                      gap-2
-                      px-5
-                      py-3
-                      rounded-xl
-                      border
-                      border-primary
-                      text-primary
-                      text-sm
-                      font-medium
-                      hover:bg-primary
-                      hover:text-white
-                      transition
+                        flex
+                        items-center
+                        gap-2
+                        px-5
+                        py-3
+                        rounded-xl
+                        border
+                        border-primary
+                        text-primary
+                        text-sm
+                        font-medium
+                        hover:bg-primary
+                        hover:text-white
+                        transition
                       "
                     >
                       <Github className="w-4 h-4" />
 
-                      Github
+                      GitHub
                     </a>
                   ) : (
                     <button
+                      type="button"
+                      disabled
                       className="
-                      flex
-                      items-center
-                      gap-2
-                      px-5
-                      py-3
-                      rounded-xl
-                      border
-                      border-primary
-                      text-primary
-                      text-sm
-                      font-medium
-                      hover:bg-primary
-                      hover:text-white
-                      transition
+                        flex
+                        items-center
+                        gap-2
+                        px-5
+                        py-3
+                        rounded-xl
+                        border
+                        border-white/20
+                        text-muted-foreground
+                        text-sm
+                        font-medium
+                        cursor-not-allowed
                       "
                     >
                       <Github className="w-4 h-4" />
 
-                      Github
+                      GitHub
                     </button>
                   )}
                 </div>
@@ -386,47 +387,47 @@ export default function Projects() {
 
               <div
                 className="
-                absolute
-                inset-0
-                rounded-3xl
-                border
-                border-primary/10
-                group-hover:border-primary/30
-                transition
-                pointer-events-none
+                  absolute
+                  inset-0
+                  rounded-3xl
+                  border
+                  border-primary/10
+                  group-hover:border-primary/30
+                  transition
+                  pointer-events-none
                 "
-              >
-              </div>
+              />
             </div>
           ))}
         </div>
 
-        {/* View More Button */}
+        {/* View More */}
 
         <div
           className="
-          flex
-          justify-center
-          mt-16
-          animate-fade-in
-          animation-delay-500
+            flex
+            justify-center
+            mt-16
+            animate-fade-in
+            animation-delay-500
           "
         >
           <button
+            type="button"
             className="
-            flex
-            items-center
-            gap-3
-            px-7
-            py-3
-            rounded-full
-            glass
-            border
-            border-primary/30
-            text-white
-            hover:bg-primary
-            transition-all
-            duration-300
+              flex
+              items-center
+              gap-3
+              px-7
+              py-3
+              rounded-full
+              glass
+              border
+              border-primary/30
+              text-white
+              hover:bg-primary
+              transition-all
+              duration-300
             "
           >
             View All Projects

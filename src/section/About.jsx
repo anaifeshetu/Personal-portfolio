@@ -1,114 +1,179 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { Code2, Rocket, Brain, Lightbulb } from "lucide-react";
 
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Frontend Engineer",
     description:
-      "Writing clean, maintainable, and scalable code that is easy to understand and built to last.",
+      "Building modern, responsive, and user-friendly web experiences with React and modern frontend technologies.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Backend Learning",
     description:
-      "Building fast, responsive, and reliable applications that provide a smooth user experience.",
+      "Currently expanding my backend development skills to build complete and reliable applications.",
   },
   {
-    icon: Users,
-    title: "Collaboration",
+    icon: Brain,
+    title: "AI Engineering Goal",
     description:
-      "Working effectively with others, sharing ideas, and contributing to meaningful software projects.",
+      "My long-term goal is to become an AI Engineer and create intelligent solutions for real-world problems.",
   },
   {
     icon: Lightbulb,
     title: "Continuous Learning",
     description:
-      "Continuously learning new technologies and improving my skills to become a better software engineer.",
+      "Always learning, practicing, and improving my skills through projects and real-world challenges.",
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section
+      id="about"
+      className="relative py-24 md:py-28 overflow-hidden"
+    >
+      {/* Background Glow */}
+      <div className="absolute top-20 left-0 w-72 h-72 bg-primary/10 rounded-full blur-[120px]" />
+
+      <div className="absolute bottom-10 right-0 w-72 h-72 bg-primary/5 rounded-full blur-[120px]" />
+
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left Column */}
-          <div className="space-y-8">
+        {/* Section */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            <div className="animate-fade-in">
-              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                About Me
-              </span>
-            </div>
+          {/* =========================
+              LEFT SIDE
+          ========================= */}
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+          <div className="animate-fade-in">
+
+            <span className="text-primary text-sm font-medium tracking-[0.25em] uppercase">
+              About Me
+            </span>
+
+            <h2 className="mt-5 text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground">
+              Building my skills,
               <br />
+
               <span className="font-serif font-normal text-white">
-                one Component at a time.
+                creating my future.
               </span>
             </h2>
 
-            <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
+            <div className="mt-7 space-y-4">
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate Software Engineer with a strong interest in
-                creating modern and meaningful digital experiences. My journey
-                in software development began when I joined the Software
-                Engineering department, where I discovered my passion for
-                coding, problem-solving, and building technology.
+              <p className="text-base md:text-lg text-muted-foreground leading-8">
+                I'm a passionate{" "}
+                <span className="text-white font-semibold">
+                  Frontend Engineer
+                </span>{" "}
+                who enjoys building modern, responsive, and user-friendly
+                digital experiences.
               </p>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Since then, I have been continuously developing my skills and
-                working with modern technologies such as React, Next.js,
-                TypeScript, Node.js, and databases. I enjoy turning ideas into
-                clean, responsive, and user-friendly applications.
+              <p className="text-base md:text-lg text-muted-foreground leading-8">
+                I have developed my skills through{" "}
+                <span className="text-white font-medium">
+                  real-world projects
+                </span>{" "}
+                and continuous learning. I'm also currently learning{" "}
+                <span className="text-primary font-semibold">
+                  Backend Development
+                </span>{" "}
+                to become a more complete software engineer.
               </p>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I also gained practical experience through a 2-month Software
-                Engineering internship at Hahu Cloud Technology. This
-                experience allowed me to work in a professional environment,
-                collaborate with a team, improve my development skills, and
-                gain a better understanding of real-world software development.
+              <p className="text-base md:text-lg text-muted-foreground leading-8">
+                My ultimate goal is to become an{" "}
+                <span className="text-primary font-semibold">
+                  AI Engineer
+                </span>{" "}
+                and use artificial intelligence and machine learning to
+                build meaningful solutions for real-world problems.
               </p>
 
-              <div className="glass rounded-2xl p-6 mt-8 glow-border animate-fade-in animation-delay-300">
-                <p className="text-lg text-muted-foreground leading-relaxed italic">
-                  "My goal is to continuously grow as a Software Engineer and
-                  build digital products that are useful, reliable, and
-                  enjoyable for people to use."
-                </p>
-              </div>
             </div>
-          </div>
 
-          {/* Right Column */}
-          <div className="grid sm:grid-cols-2 gap-6">
+            {/* Vision */}
+            <div className="glass rounded-2xl p-6 mt-7 border border-white/10">
 
-            {highlights.map((item, idx) => (
-              <div
-                key={idx}
-                className="glass p-6 rounded-2xl animate-fade-in"
-                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-start gap-4">
+
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Rocket className="w-5 h-5 text-primary" />
                 </div>
 
-                <h3 className="text-lg font-semibold mb-2">
-                  {item.title}
-                </h3>
+                <div>
+                  <h3 className="text-base font-semibold text-white mb-1">
+                    My Vision
+                  </h3>
 
-                <p className="text-sm text-muted-foreground">
-                  {item.description}
-                </p>
+                  <p className="text-sm text-muted-foreground leading-6">
+                    Keep learning, keep building, and keep growing toward
+                    becoming an AI Engineer.
+                  </p>
+                </div>
+
               </div>
-            ))}
+
+            </div>
 
           </div>
+
+          {/* =========================
+              RIGHT SIDE
+          ========================= */}
+
+          <div className="grid sm:grid-cols-2 gap-5">
+
+            {highlights.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="
+                    group
+                    glass
+                    rounded-2xl
+                    p-6
+                    min-h-[230px]
+                    border
+                    border-white/10
+                    hover:border-primary/30
+                    hover:-translate-y-1
+                    transition-all
+                    duration-300
+                    animate-fade-in
+                  "
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
+                >
+
+                  {/* Icon */}
+                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground leading-6">
+                    {item.description}
+                  </p>
+
+                </div>
+              );
+            })}
+
+          </div>
+
         </div>
       </div>
     </section>
