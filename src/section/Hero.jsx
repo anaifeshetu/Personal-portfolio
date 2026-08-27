@@ -28,13 +28,13 @@ const skills = [
 
 export const Hero = () => {
   return (
-    <section className="hero-section relative min-h-screen flex items-center overflow-hidden">
+    <section className="hero-section relative min-h-screen w-full flex items-center overflow-hidden">
 
       {/* ============================= */}
       {/* BACKGROUND IMAGE */}
       {/* ============================= */}
 
-      <div className="hero-background absolute inset-0">
+      <div className="hero-background absolute inset-0 w-full h-full">
         <img
           src={bg}
           alt=""
@@ -55,9 +55,13 @@ export const Hero = () => {
 
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
 
+        {/* ONLY TEXT + IMAGE GAP */}
         <div className="grid lg:grid-cols-2 gap-[50px] items-center">
 
+          {/* ============================= */}
           {/* LEFT COLUMN */}
+          {/* ============================= */}
+
           <div className="space-y-8">
 
             {/* Small Heading */}
@@ -98,9 +102,13 @@ export const Hero = () => {
                 <AnimatedBorderButton />
               </a>
             </div>
+
           </div>
 
+          {/* ============================= */}
           {/* RIGHT COLUMN */}
+          {/* ============================= */}
+
           <div className="relative animate-fade-in animation-delay-300 flex flex-col items-start">
 
             <div className="relative max-w-md ml-auto">
@@ -171,7 +179,10 @@ export const Hero = () => {
           </div>
         </div>
 
+        {/* ============================= */}
         {/* SOCIAL LINKS */}
+        {/* ============================= */}
+
         <div className="mt-12 flex items-center gap-4 animate-fade-in animation-delay-400">
 
           <span className="text-sm text-muted-foreground">
@@ -221,7 +232,10 @@ export const Hero = () => {
           })}
         </div>
 
+        {/* ============================= */}
         {/* SKILLS */}
+        {/* ============================= */}
+
         <div className="mt-20 animate-fade-in animation-delay-600">
 
           <p className="text-sm text-muted-foreground mb-6 text-center">
@@ -259,7 +273,10 @@ export const Hero = () => {
           </div>
         </div>
 
+        {/* ============================= */}
         {/* SCROLL */}
+        {/* ============================= */}
+
         <div
           className="
             absolute

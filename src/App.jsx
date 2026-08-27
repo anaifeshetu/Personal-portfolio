@@ -26,19 +26,46 @@ function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground transition-colors duration-300">
+
+      {/* NAVBAR */}
       <Navbar
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
       />
 
+      {/* HERO - FULL WIDTH */}
+      <Hero />
+
+      {/* OTHER SECTIONS */}
       <main className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
-        <Hero />
-        <About />
-        <Projects />
-        <Achivements />
-        <Skills />
-        <Approach />
-        <Contact />
+
+        <section className="pt-32">
+          <About />
+        </section>
+
+        <section className="pt-32">
+          <Projects />
+        </section>
+
+        <section className="pt-32">
+          <Achivements />
+        </section>
+
+        <section className="pt-32">
+          <Skills />
+        </section>
+
+        <section className="pt-32">
+          <Approach />
+        </section>
+
+        <section
+          id="contact"
+          className="pt-32 pb-20"
+        >
+          <Contact />
+        </section>
+
       </main>
     </div>
   );
