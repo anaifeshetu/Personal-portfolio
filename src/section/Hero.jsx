@@ -1,5 +1,5 @@
 import bg from "../assets/bg.png";
-import anna from "../assets/anna.jpg";
+import anna from "../assets/anna.png";
 import AnimatedBorderButton from "../Component/AnimatedBorderButton";
 
 import {
