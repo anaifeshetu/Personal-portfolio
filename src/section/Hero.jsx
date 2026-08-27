@@ -55,14 +55,14 @@ export const Hero = () => {
 
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
 
-        {/* ONLY TEXT + IMAGE GAP */}
-        <div className="grid lg:grid-cols-2 gap-[50px] items-center">
+        {/* TEXT + IMAGE */}
+        <div className="grid lg:grid-cols-2 gap-6 items-center justify-items-center">
 
           {/* ============================= */}
           {/* LEFT COLUMN */}
           {/* ============================= */}
 
-          <div className="space-y-8">
+          <div className="space-y-8 w-full max-w-xl">
 
             {/* Small Heading */}
             <div className="animate-fade-in">
@@ -109,9 +109,9 @@ export const Hero = () => {
           {/* RIGHT COLUMN */}
           {/* ============================= */}
 
-          <div className="relative animate-fade-in animation-delay-300 flex flex-col items-start">
+          <div className="relative animate-fade-in animation-delay-300 flex flex-col items-center w-full">
 
-            <div className="relative max-w-md ml-auto">
+            <div className="relative max-w-md">
 
               {/* Image Glow */}
               <div
@@ -166,7 +166,7 @@ export const Hero = () => {
                     </div>
 
                     <div className="text-xs text-muted-foreground mt-1">
-                      Years Exp.
+                      Month Exp.
                     </div>
 
                   </div>
