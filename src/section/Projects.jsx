@@ -7,13 +7,13 @@ import proj4 from "../assets/proj4.png";
 
 const projects = [
   {
-    title: "Ethio Massage",
+     title: "Ecommerce Fashion Store",
     description:
-      "A modern massage and wellness booking platform where users can explore services, discover available treatments, and easily schedule appointments through a clean and responsive interface.",
-    image: proj1,
-    tags: ["React", "JavaScript", "Tailwind CSS"],
-    liveDemo: "https://ethiomassage.egmhoney.workers.dev/",
-    github: "https://github.com/anaifeshetu/ethiomassage",
+      "A modern fashion ecommerce website where customers can explore men's, women's, and kids' collections, view detailed products, select sizes, add items to their cart, and complete the shopping experience through a clean and responsive interface.",
+    image: proj4,
+    tags: ["React", "JavaScript", "Bootstrap"],
+    liveDemo: "https://ecommerce.egmhoney.workers.dev/",
+    github: "https://github.com/anaifeshetu/Ecommerce",
   },
 
   {
@@ -36,14 +36,14 @@ const projects = [
     github: "https://github.com/anaifeshetu/World_News",
   },
 
-  {
-    title: "Ecommerce Fashion Store",
+  {title: "Ethio Massage",
     description:
-      "A modern fashion ecommerce website where customers can explore men's, women's, and kids' collections, view detailed products, select sizes, add items to their cart, and complete the shopping experience through a clean and responsive interface.",
-    image: proj4,
-    tags: ["React", "JavaScript", "Bootstrap"],
-    liveDemo: "https://ecommerce.egmhoney.workers.dev/",
-    github: "https://github.com/anaifeshetu/Ecommerce",
+      "A modern massage and wellness booking platform where users can explore services, discover available treatments, and easily schedule appointments through a clean and responsive interface.",
+    image: proj1,
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    liveDemo: "https://ethiomassage.egmhoney.workers.dev/",
+    github: "https://github.com/anaifeshetu/ethiomassage",
+   
   },
 ];
 
