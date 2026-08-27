@@ -10,18 +10,15 @@ import Navbar from "./layout/Navbar";
 import Approach from "./section/Approach";
 
 function App() {
-  // 🌙 ALWAYS START IN DARK MODE
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const root = document.documentElement;
 
     if (isDarkMode) {
-      // 🌙 DARK MODE
       root.classList.remove("light");
       root.classList.add("dark");
     } else {
-      // ☀️ LIGHT MODE
       root.classList.remove("dark");
       root.classList.add("light");
     }
@@ -34,7 +31,7 @@ function App() {
         setIsDarkMode={setIsDarkMode}
       />
 
-      <main>
+      <main className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
         <Hero />
         <About />
         <Projects />
